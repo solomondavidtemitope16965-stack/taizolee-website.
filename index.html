@@ -18,463 +18,187 @@
       --radius: 18px;
       --shadow: 0 14px 40px rgba(16, 43, 70, .10);
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+    body { margin: 0; color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
     a { color: inherit; }
     .container { width: min(1120px, 90%); margin: 0 auto; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid #e8eeeb;
-    }
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--navy);
-      font-weight: 800;
-      letter-spacing: .04em;
-    }
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      color: var(--navy);
-      background: var(--yellow);
-      border-radius: 12px;
-      font-size: 22px;
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-    .nav-links a {
-      text-decoration: none;
-      font-size: .94rem;
-      font-weight: 700;
-    }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); border-bottom: 1px solid #e8eeeb; }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--navy); font-weight: 800; letter-spacing: .04em; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; color: var(--navy); background: var(--yellow); border-radius: 12px; font-size: 22px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { text-decoration: none; font-size: .94rem; font-weight: 700; }
     .nav-links a:hover { color: var(--green); }
-    .menu-toggle {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: var(--navy);
-      font-size: 1.7rem;
-      cursor: pointer;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 13px 20px;
-      border: 0;
-      border-radius: 9px;
-      background: var(--green);
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .2s, background .2s;
-    }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--navy); font-size: 1.7rem; cursor: pointer; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border: 0; border-radius: 9px; background: var(--green); color: var(--white); text-decoration: none; font-weight: 700; cursor: pointer; transition: transform .2s, background .2s; }
     .button:hover { background: #116d49; transform: translateY(-2px); }
     .button.secondary { background: var(--white); color: var(--navy); }
     .button.secondary:hover { background: #eef4f1; }
-
-    .hero {
-      color: var(--white);
-      background:
-        radial-gradient(ellipse at 82% 18%, rgba(245,188,50,.24), transparent 28%),
-        linear-gradient(120deg, #102b46 10%, #176b87 100%);
-      padding: 100px 0 92px;
-      overflow: hidden;
-    }
+    .hero { color: var(--white); background: linear-gradient(120deg, #102b46 10%, #176b87 100%); padding: 76px 0; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 52px; }
     .hero-content { max-width: 720px; }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      color: var(--yellow);
-      font-size: .82rem;
-      font-weight: 800;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-    h1 {
-      max-width: 760px;
-      margin: 0 0 20px;
-      font-size: clamp(2.5rem, 6vw, 4.7rem);
-      line-height: 1.06;
-      letter-spacing: -.04em;
-    }
+    .eyebrow { display: inline-block; margin-bottom: 14px; color: var(--yellow); font-size: .82rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 0 0 20px; font-size: clamp(2.5rem, 6vw, 4.7rem); line-height: 1.06; letter-spacing: -.04em; }
     .hero p { max-width: 620px; color: #e4eff4; font-size: 1.1rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .hero-note { margin-top: 28px; color: #d3e2e8; font-size: .92rem; }
-
+    .hero-photo { position: relative; min-height: 390px; }
+    .hero-photo img { width: 100%; height: 390px; display: block; object-fit: cover; border: 7px solid rgba(255,255,255,.18); border-radius: 28px; box-shadow: 0 24px 60px rgba(0,0,0,.24); }
+    .photo-badge { position: absolute; right: -14px; bottom: 24px; max-width: 210px; padding: 14px 18px; color: var(--navy); background: var(--white); border-radius: 14px; box-shadow: var(--shadow); font-weight: 700; }
     section { padding: 78px 0; }
     .section-heading { max-width: 680px; margin-bottom: 34px; }
-    .section-heading h2 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.15;
-    }
+    .section-heading h2 { margin: 0 0 12px; color: var(--navy); font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.15; }
     .section-heading p { margin: 0; color: var(--muted); }
-    .services { background: var(--light); }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    .service-card {
-      padding: 24px;
-      background: var(--white);
-      border: 1px solid #e7eeea;
-      border-radius: var(--radius);
-      box-shadow: 0 6px 18px rgba(16,43,70,.04);
-    }
-    .service-icon {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      margin-bottom: 16px;
-      background: #fff4d4;
-      border-radius: 14px;
-      font-size: 1.4rem;
-    }
+    .services, .contact { background: var(--light); }
+    .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .service-card { padding: 24px; background: var(--white); border: 1px solid #e7eeea; border-radius: var(--radius); box-shadow: 0 6px 18px rgba(16,43,70,.04); }
+    .service-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 16px; background: #fff4d4; border-radius: 14px; font-size: 1.4rem; }
     .service-card h3 { margin: 0 0 8px; color: var(--navy); font-size: 1.08rem; }
     .service-card p { margin: 0; color: var(--muted); font-size: .94rem; }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 50px;
-    }
-    .about-panel {
-      padding: 34px;
-      color: var(--white);
-      background: var(--navy);
-      border-radius: 24px;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .gallery-card { position: relative; min-height: 270px; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--navy); box-shadow: var(--shadow); }
+    .gallery-card img { width: 100%; height: 100%; min-height: 270px; display: block; object-fit: cover; transition: transform .35s ease; }
+    .gallery-card:hover img { transform: scale(1.05); }
+    .gallery-card figcaption { position: absolute; inset: auto 0 0; padding: 38px 20px 18px; color: var(--white); font-weight: 700; background: linear-gradient(transparent, rgba(7,25,39,.85)); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+    .about-photo { width: 100%; min-height: 360px; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow); }
+    .about-panel { padding: 34px; color: var(--white); background: var(--navy); border-radius: 24px; }
     .about-panel h3 { margin: 0 0 12px; font-size: 1.6rem; }
     .about-panel p { margin: 0; color: #d7e4ea; }
     .check-list { padding: 0; margin: 22px 0 0; list-style: none; }
     .check-list li { margin: 10px 0; }
     .check-list li::before { content: "✓"; margin-right: 10px; color: var(--yellow); font-weight: 800; }
-
-    .contact { background: var(--light); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-    .contact-details, .quote-form {
-      padding: 30px;
-      background: var(--white);
-      border: 1px solid #e7eeea;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: start; }
+    .contact-details, .quote-form { padding: 30px; background: var(--white); border: 1px solid #e7eeea; border-radius: var(--radius); box-shadow: var(--shadow); }
     .contact-details h3, .quote-form h3 { margin: 0 0 18px; color: var(--navy); }
     .contact-item { margin: 16px 0; }
     .contact-item strong { display: block; color: var(--navy); }
     .contact-item a { color: var(--green); text-decoration: none; }
     .contact-item a:hover { text-decoration: underline; }
     label { display: block; margin: 14px 0 6px; color: var(--navy); font-weight: 700; font-size: .92rem; }
-    input, select, textarea {
-      width: 100%;
-      padding: 12px 13px;
-      border: 1px solid #d5dfda;
-      border-radius: 8px;
-      color: var(--ink);
-      font: inherit;
-    }
-    input:focus, select:focus, textarea:focus {
-      outline: 3px solid rgba(23,134,91,.18);
-      border-color: var(--green);
-    }
+    input, select, textarea { width: 100%; padding: 12px 13px; border: 1px solid #d5dfda; border-radius: 8px; color: var(--ink); font: inherit; }
+    input:focus, select:focus, textarea:focus { outline: 3px solid rgba(23,134,91,.18); border-color: var(--green); }
     textarea { min-height: 110px; resize: vertical; }
     .quote-form .button { margin-top: 16px; }
     .form-note { color: var(--muted); font-size: .85rem; }
-
     footer { padding: 24px 0; color: #d5e0e5; background: #0b2034; font-size: .9rem; }
     .footer-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
     @media (max-width: 850px) {
       .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 34px; }
+      .hero-photo { min-height: 320px; }
+      .hero-photo img { height: 320px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-card:last-child { grid-column: 1 / -1; }
     }
     @media (max-width: 650px) {
       .menu-toggle { display: block; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        padding: 18px 5%;
-        background: var(--white);
-        border-bottom: 1px solid #e8eeeb;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-      }
+      .nav-links { display: none; position: absolute; top: 76px; left: 0; right: 0; padding: 18px 5%; background: var(--white); border-bottom: 1px solid #e8eeeb; flex-direction: column; align-items: stretch; gap: 16px; }
       .nav-links.open { display: flex; }
       .nav-links .button { text-align: center; }
-      .hero { padding: 76px 0; }
+      .hero { padding: 62px 0; }
       section { padding: 60px 0; }
-      .service-grid { grid-template-columns: 1fr; }
+      .service-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-card:last-child { grid-column: auto; }
+      .gallery-card, .gallery-card img { min-height: 240px; }
       .contact-details, .quote-form, .about-panel { padding: 24px; }
+      .photo-badge { right: 8px; }
     }
   </style>
 </head>
 <body>
   <header>
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="TAIZOLEE INC. home">
-        <span class="brand-mark" aria-hidden="true">☀</span>
-        <span>TAIZOLEE INC.</span>
-      </a>
+      <a class="brand" href="#home" aria-label="TAIZOLEE INC. home"><span class="brand-mark" aria-hidden="true">☀</span><span>TAIZOLEE INC.</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="button" href="#contact">Request a Quote</a>
+        <a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#contact">Contact</a><a class="button" href="#contact">Request a Quote</a>
       </div>
     </nav>
   </header>
-
   <main>
     <section class="hero" id="home">
-      <div class="container hero-content">
-        <span class="eyebrow">Practical clean energy solutions</span>
-        <h1>Power your future with cleaner energy.</h1>
-        <p>
-          From solar installations and battery systems to pumping, lighting,
-          wind energy, and maintenance, TAIZOLEE INC. helps you find the right
-          energy solution for your needs.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Request a Quote</a>
-          <a class="button secondary" href="tel:+16479197047">Call +1 (647) 919-7047</a>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Practical clean energy solutions</span>
+          <h1>Power your future with cleaner energy.</h1>
+          <p>From solar installations and battery systems to pumping, lighting, wind energy, and maintenance, TAIZOLEE INC. helps you find the right energy solution for your needs.</p>
+          <div class="hero-actions"><a class="button" href="#contact">Request a Quote</a><a class="button secondary" href="tel:+16479197047">Call +1 (647) 919-7047</a></div>
+          <div class="hero-note">Based in Toronto, Ontario, Canada</div>
         </div>
-        <div class="hero-note">Based in Toronto, Ontario, Canada</div>
+        <div class="hero-photo">
+          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Solar panels generating clean energy beneath a bright sky" fetchpriority="high">
+          <div class="photo-badge">Clean energy, built around your needs</div>
+        </div>
       </div>
     </section>
-
     <section class="services" id="services">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow" style="color: var(--green)">What we do</span>
-          <h2>Energy solutions for every project</h2>
-          <p>Explore our services and get in touch to discuss the right setup for your home, business, or project.</p>
-        </div>
+        <div class="section-heading"><span class="eyebrow" style="color: var(--green)">What we do</span><h2>Energy solutions for every project</h2><p>Explore our services and get in touch to discuss the right setup for your home, business, or project.</p></div>
         <div class="service-grid">
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">☀️</div>
-            <h3>Solar Installation</h3>
-            <p>Solar energy systems planned around your site and energy needs.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🔋</div>
-            <h3>Inverters &amp; Batteries</h3>
-            <p>Inverter and battery solutions for dependable power storage.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">💧</div>
-            <h3>Borehole Solar Pumping</h3>
-            <p>Solar-powered pumping solutions for borehole water systems.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">💡</div>
-            <h3>Solar Street Lights</h3>
-            <p>Solar lighting solutions for outdoor spaces and pathways.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🌬️</div>
-            <h3>Wind Energy</h3>
-            <p>Wind energy options to support your renewable power goals.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🏢</div>
-            <h3>Commercial &amp; Industrial</h3>
-            <p>Energy solutions for commercial and industrial requirements.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🔄</div>
-            <h3>Hybrid Systems</h3>
-            <p>Integrated systems combining energy sources to suit your project.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🛠️</div>
-            <h3>Maintenance</h3>
-            <p>Maintenance support to help keep your energy system working well.</p>
-          </article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">☀️</div><h3>Solar Installation</h3><p>Solar energy systems planned around your site and energy needs.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">🔋</div><h3>Inverters &amp; Batteries</h3><p>Inverter and battery solutions for dependable power storage.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">💧</div><h3>Borehole Solar Pumping</h3><p>Solar-powered pumping solutions for borehole water systems.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">💡</div><h3>Solar Street Lights</h3><p>Solar lighting solutions for outdoor spaces and pathways.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">🌬️</div><h3>Wind Energy</h3><p>Wind energy options to support your renewable power goals.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">🏢</div><h3>Commercial &amp; Industrial</h3><p>Energy solutions for commercial and industrial requirements.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">🔄</div><h3>Hybrid Systems</h3><p>Integrated systems combining energy sources to suit your project.</p></article>
+          <article class="service-card"><div class="service-icon" aria-hidden="true">🛠️</div><h3>Maintenance</h3><p>Maintenance support to help keep your energy system working well.</p></article>
         </div>
       </div>
     </section>
-
-    <section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <span class="eyebrow">Practical clean energy solutions</span>
-      <h1>Power your future with cleaner energy.</h1>
-      <p>
-        From solar installations and battery systems to pumping, lighting,
-        wind energy, and maintenance, TAIZOLEE INC. helps you find the right
-        energy solution for your needs.
-      </p>
-      <div class="hero-actions">
-        <a class="button" href="#contact">Request a Quote</a>
-        <a class="button secondary" href="tel:+16479197047">Call +1 (647) 919-7047</a>
+    <section id="projects">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow" style="color: var(--green)">Clean energy in action</span><h2>Powering a brighter future</h2><p>A look at the solar technology and renewable energy solutions that inspire our work.</p></div>
+        <div class="gallery-grid">
+          <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Rows of solar panels collecting sunlight" loading="lazy"><figcaption>Solar panel installations</figcaption></figure>
+          <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Renewable energy panels in a sunny landscape" loading="lazy"><figcaption>Smarter energy for every project</figcaption></figure>
+          <figure class="gallery-card"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="Close view of solar panels under a blue sky" loading="lazy"><figcaption>Clean power from the sun</figcaption></figure>
+        </div>
       </div>
-      <div class="hero-note">Based in Toronto, Ontario, Canada</div>
-    </div>
-
-    <div class="hero-visual">
-      <img src="images/solar-1.jpg" alt="Solar installation">
-      <img src="images/solar-2.jpg" alt="Solar battery and energy system">
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="image-gallery">
-      <img src="images/solar-3.jpg" alt="Solar power solution">
-      <img src="images/solar-1.jpg" alt="Clean energy project">
-      <img src="images/solar-2.jpg" alt="Wind and solar energy system">
-    </div>
-  </div>
     </section>
-
+    <section id="about">
+      <div class="container about-grid">
+        <img class="about-photo" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Green landscape and renewable energy infrastructure" loading="lazy">
+        <div class="about-panel"><h3>Energy solutions made practical</h3><p>TAIZOLEE INC. helps homes, businesses, and project teams explore dependable renewable energy options in Toronto and beyond.</p><ul class="check-list"><li>Solutions tailored to your project</li><li>Solar, storage, pumping, and lighting</li><li>Installation and ongoing maintenance</li></ul></div>
+      </div>
+    </section>
     <section class="contact" id="contact">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow" style="color: var(--green)">Get in touch</span>
-          <h2>Tell us about your project</h2>
-          <p>Contact TAIZOLEE INC. by phone or email, or use the form to prepare a quote request.</p>
-        </div>
+        <div class="section-heading"><span class="eyebrow" style="color: var(--green)">Get in touch</span><h2>Tell us about your project</h2><p>Contact TAIZOLEE INC. by phone or email, or use the form to prepare a quote request.</p></div>
         <div class="contact-grid">
-          <div class="contact-details">
-            <h3>Contact details</h3>
-            <div class="contact-item">
-              <strong>Phone</strong>
-              <a href="tel:+16479197047">+1 (647) 919-7047</a>
-            </div>
-            <div class="contact-item">
-              <strong>Email</strong>
-              <a href="mailto:solomon7047@gmail.com">solomon7047@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <strong>Address</strong>
-              128 Grandravine Dr<br>
-              Toronto, ON M3J 1B4, Canada
-            </div>
-            <a class="button" target="_blank" rel="noopener"
-               href="https://maps.google.com/?q=128+Grandravine+Dr+Toronto+ON+M3J+1B4+Canada">
-              View on Map
-            </a>
-          </div>
-
-          <form class="quote-form" id="quoteForm">
-            <h3>Request a quote</h3>
-            <label for="name">Your name</label>
-            <input id="name" name="name" autocomplete="name" required>
-
-            <label for="email">Your email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-
-            <label for="service">Service you’re interested in</label>
-            <select id="service" name="service" required>
-              <option value="">Select a service</option>
-              <option>Solar Installation</option>
-              <option>Inverters &amp; Batteries</option>
-              <option>Borehole Solar Pumping Machine</option>
-              <option>Solar Street Lights</option>
-              <option>Wind Energy</option>
-              <option>Commercial &amp; Industrial</option>
-              <option>Hybrid Systems</option>
-              <option>Maintenance</option>
-              <option>Other</option>
-            </select>
-
-            <label for="message">Project details</label>
-            <textarea id="message" name="message" placeholder="Tell us a little about your project"></textarea>
-
-            <button class="button" type="submit">Prepare Email</button>
-            <p class="form-note">This opens your email app with your quote request ready to send.</p>
-          </form>
+          <div class="contact-details"><h3>Contact details</h3><div class="contact-item"><strong>Phone</strong><a href="tel:+16479197047">+1 (647) 919-7047</a></div><div class="contact-item"><strong>Email</strong><a href="mailto:solomon7047@gmail.com">solomon7047@gmail.com</a></div><div class="contact-item"><strong>Address</strong>128 Grandravine Dr<br>Toronto, ON M3J 1B4, Canada</div><a class="button" target="_blank" rel="noopener" href="https://maps.google.com/?q=128+Grandravine+Dr+Toronto+ON+M3J+1B4+Canada">View on Map</a></div>
+          <form class="quote-form" id="quoteForm"><h3>Request a quote</h3><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required><label for="service">Service you’re interested in</label><select id="service" name="service" required><option value="">Select a service</option><option>Solar Installation</option><option>Inverters &amp; Batteries</option><option>Borehole Solar Pumping Machine</option><option>Solar Street Lights</option><option>Wind Energy</option><option>Commercial &amp; Industrial</option><option>Hybrid Systems</option><option>Maintenance</option><option>Other</option></select><label for="message">Project details</label><textarea id="message" name="message" placeholder="Tell us a little about your project"></textarea><button class="button" type="submit">Prepare Email</button><p class="form-note">This opens your email app with your quote request ready to send.</p></form>
         </div>
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container footer-row">
-      <span>© <span id="year"></span> TAIZOLEE INC. All rights reserved.</span>
-      <span>Clean energy solutions in Toronto, Canada</span>
-    </div>
-  </footer>
-
+  <footer><div class="container footer-row"><span>© <span id="year"></span> TAIZOLEE INC. All rights reserved.</span><span>Clean energy solutions in Toronto, Canada</span></div></footer>
   <script>
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
-
     menuToggle.addEventListener("click", () => {
       const isOpen = navLinks.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", isOpen);
       menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
-
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation menu");
-        menuToggle.textContent = "☰";
-      });
-    });
-
+    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuToggle.textContent = "☰";
+    }));
     document.getElementById("year").textContent = new Date().getFullYear();
-
     document.getElementById("quoteForm").addEventListener("submit", (event) => {
       event.preventDefault();
-
       const form = new FormData(event.currentTarget);
       const subject = encodeURIComponent("Quote request from " + form.get("name"));
-      const body = encodeURIComponent(
-        "Name: " + form.get("name") + "\n" +
-        "Email: " + form.get("email") + "\n" +
-        "Service: " + form.get("service") + "\n\n" +
-        "Project details:\n" + (form.get("message") || "Not provided")
-      );
-
-      window.location.href =
-        "mailto:solomon7047@gmail.com?subject=" + subject + "&body=" + body;
+      const body = encodeURIComponent("Name: " + form.get("name") + "\n" + "Email: " + form.get("email") + "\n" + "Service: " + form.get("service") + "\n\n" + "Project details:\n" + (form.get("message") || "Not provided"));
+      window.location.href = "mailto:solomon7047@gmail.com?subject=" + subject + "&body=" + body;
     });
   </script>
 </body>
-                                                            </html>
+</html>

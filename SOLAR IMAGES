@@ -34,8 +34,11 @@ images/commercial-solar.jpg
     grid-template-columns: 1fr;
   }
 }
-<div class="product-gallery" aria-label="Solar and clean energy product photos">
-  <article class="product-card">
+  </div>
+  <div class="product-gallery" aria-label="Solar and clean energy product photos">
+    <!-- Gallery articles -->
+  </div>
+</div>
     <img src="images/solar-panels.jpg" alt="Solar panels installed on a roof">
     <h3>Solar panels</h3>
   </article>

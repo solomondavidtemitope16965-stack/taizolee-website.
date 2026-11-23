@@ -36,30 +36,44 @@ images/commercial-solar.jpg
 }
   </div>
   <div class="product-gallery" aria-label="Solar and clean energy product photos">
-    <!-- Gallery articles -->
-  </div>
-</div>
+  <article class="product-card">
     <img src="images/solar-panels.jpg" alt="Solar panels installed on a roof">
     <h3>Solar panels</h3>
   </article>
+
   <article class="product-card">
     <img src="images/inverter-battery.jpg" alt="Solar inverter and battery system">
     <h3>Inverters and batteries</h3>
   </article>
+
   <article class="product-card">
     <img src="images/solar-pumping.jpg" alt="Solar-powered water pumping equipment">
     <h3>Solar water pumping</h3>
   </article>
+
   <article class="product-card">
     <img src="images/street-lights.jpg" alt="Solar street lights installed outdoors">
     <h3>Solar street lights</h3>
   </article>
+
   <article class="product-card">
     <img src="images/wind-turbine.jpg" alt="Wind turbine generating renewable energy">
     <h3>Wind energy</h3>
   </article>
+
   <article class="product-card">
     <img src="images/commercial-solar.jpg" alt="Solar panels on a commercial building">
     <h3>Commercial solar</h3>
   </article>
+</div>
+<div class="container">
+  <div class="section-heading">
+    <!-- Existing heading -->
+  </div>
+
+  <div class="service-grid">
+    <!-- Existing eight service cards -->
+  </div>
+
+  <!-- Product gallery goes here -->
 </div>

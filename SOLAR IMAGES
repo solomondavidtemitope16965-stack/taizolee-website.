@@ -10,7 +10,6 @@ images/commercial-solar.jpg
   gap: 20px;
   margin-top: 32px;
 }
-
 .product-card {
   overflow: hidden;
   background: var(--white);
@@ -18,21 +17,18 @@ images/commercial-solar.jpg
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
 .product-card img {
   display: block;
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
-
 .product-card h3 {
   margin: 0;
   padding: 16px 18px;
   color: var(--navy);
   font-size: 1rem;
 }
-
 @media (max-width: 650px) {
   .product-gallery {
     grid-template-columns: 1fr;
@@ -43,27 +39,22 @@ images/commercial-solar.jpg
     <img src="images/solar-panels.jpg" alt="Solar panels installed on a roof">
     <h3>Solar panels</h3>
   </article>
-
   <article class="product-card">
     <img src="images/inverter-battery.jpg" alt="Solar inverter and battery system">
     <h3>Inverters and batteries</h3>
   </article>
-
   <article class="product-card">
     <img src="images/solar-pumping.jpg" alt="Solar-powered water pumping equipment">
     <h3>Solar water pumping</h3>
   </article>
-
   <article class="product-card">
     <img src="images/street-lights.jpg" alt="Solar street lights installed outdoors">
     <h3>Solar street lights</h3>
   </article>
-
   <article class="product-card">
     <img src="images/wind-turbine.jpg" alt="Wind turbine generating renewable energy">
     <h3>Wind energy</h3>
   </article>
-
   <article class="product-card">
     <img src="images/commercial-solar.jpg" alt="Solar panels on a commercial building">
     <h3>Commercial solar</h3>
